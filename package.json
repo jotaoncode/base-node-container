@@ -1,0 +1,25 @@
+{
+  "name": "aws-container-base",
+  "version": "1.0.0",
+  "description": "base container",
+  "main": "./src/index.js",
+  "dependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2017": "^6.22.0",
+    "express": "^4.16.2",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "node ./webpack.prod.js && nodemon ./dist/index.js",
+    "start": "node ./webpack.prod.js && node ./dist/index.js",
+    "clean:dir": "rimraf dist",
+    "deploy": "npm i && npm run clean:dir && npm start"
+  },
+  "author": "",
+  "license": "ISC"
+}
