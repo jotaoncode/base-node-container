@@ -14,6 +14,6 @@ $ docker build -t NAME .
 
 Careful what ports you map so you have a proper out from your application
 
-$ docker run NAME -p 80:8080
+$ docker run -p 80:8080 NAME
 
 You are exposing the docker container with the port 80 now
